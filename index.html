@@ -41,7 +41,9 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/my.png"><img style="width:50%;max-width:50%;height:50%;" alt="profile photo" src="images/my.png" class="hoverZoomLink"></a>
+              <a href="images/my.png">
+                <img style="width:50%;max-width:50%;object-fit:cover;" alt="profile photo" src="images/my.png" class="hoverZoomLink">
+              </a>
             </td>
           </tr>
         </tbody></table>
@@ -71,6 +73,53 @@
     </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="est_stop()" onmouseover="est_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='est_image'>
+                  <img src='images/est.png' width="160"></div>
+                <img src='images/est.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function est_start() {
+                  document.getElementById('est_image').style.opacity = "1";
+                }
+
+                function est_stop() {
+                  document.getElementById('est_image').style.opacity = "0";
+                }
+                est_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://pubs.acs.org/doi/full/10.1021/acs.est.3c00199">
+                <papertitle>Exploring the Complexities of Dissolved Organic Matter Photochemistry from the Molecular Level by Using Machine Learning Approaches</papertitle>
+              </a>
+              <br>
+              Chen Zhao&#42,
+              <strong>Xinyue Xu&#42</strong>,
+              Hongmei Chen,
+              Fengwen Wang, 
+              Penghui Li, 
+              Chen He, 
+              Quan Shi, 
+              Yuanbi Yi, 
+              Xiaomeng Li, 
+              Siliang Li, 
+              Ding He
+              <br>
+              <em>Environmental Science & Technology (ES&T)</em>, 2023
+              <br>
+              <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.est.3c00199">Paper</a>	
+              <p></p>
+              <p>
+                Photochemical reactions are essential components altering dissolved organic matter (DOM) chemistry. 
+                We first used machine learning approaches to compatibly integrate existing irradiation experiments 
+                and provide novel insights into the estuarine DOM transformation processes.
+              </p>
+            </td>
+          </tr>
 
           <tr onmouseout="ils_stop()" onmouseover="ils_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -105,53 +154,6 @@
                 This thesis develops an enhanced version based on the original Iterative Label
                 Spreading Clustering which is specially designed for materials science, and aim to
                 become faster and have fewer hyperparameters.
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="est_stop()" onmouseover="est_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='est_image'>
-                  <img src='images/est.png' width="160"></div>
-                <img src='images/est.png' width="160">
-              </div>
-              <script type="text/javascript">
-                function est_start() {
-                  document.getElementById('est_image').style.opacity = "1";
-                }
-
-                function est_stop() {
-                  document.getElementById('est_image').style.opacity = "0";
-                }
-                est_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="">
-                <papertitle>Exploring the Complexities of Dissolved Organic Matter Photochemistry from the Molecular Level by Using Machine Learning Approaches</papertitle>
-              </a>
-              <br>
-              Chen Zhao&#42,
-              <strong>Xinyue Xu&#42</strong>,
-              Hongmei Chen,
-              Fengwen Wang, 
-              Penghui Li, 
-              Chen He, 
-              Quan Shi, 
-              Yuanbi Yi, 
-              Xiaomeng Li, 
-              Siliang Li, 
-              Ding He
-              <br>
-              <em>Environmental Science & Technology (ES&T)</em>, 2023
-              <br>
-              <a href="https://pubs.acs.org/doi/full/10.1021/acs.est.3c00199">Paper</a>	
-              <p></p>
-              <p>
-                Photochemical reactions are essential components altering dissolved organic matter (DOM) chemistry. 
-                We first used machine learning approaches to compatibly integrate existing irradiation experiments 
-                and provide novel insights into the estuarine DOM transformation processes.
               </p>
             </td>
           </tr>
