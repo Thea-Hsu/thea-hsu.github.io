@@ -54,7 +54,7 @@
             <heading>Research</heading>
             <p>
               My research interest is to apply Machine Learning to interdisciplinary (medical image analysis, material science, environmental science etc.) In particluar,
-              I am interested in AutoML, Interpretable AI and Clustering Analysis.
+              I am interested in Interpretable ML, AutoML and Clustering Analysis.
             </p>
           </td>
         </tr>
@@ -74,6 +74,47 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="aug_stop()" onmouseover="aug_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='est_image'>
+                  <img src='images/aug.png' width="160"></div>
+                <img src='images/aug.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function aug_start() {
+                  document.getElementById('aug_image').style.opacity = "1";
+                }
+
+                function aug_stop() {
+                  document.getElementById('aug_image').style.opacity = "0";
+                }
+                aug_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://arxiv.org/abs/2305.15777">
+                <papertitle>Dynamic Data Augmentation via MCTS for Prostate MRI Segmentation</papertitle>
+              </a>
+              <br>
+              <strong>Xinyue Xu&#42</strong>,
+              Yuhan Hsi&#42,
+              Haonan Wang, 
+              Xiaomeng Li
+              <br>
+              <em>ICONIP</em>, 2023
+              <br>
+              <a href="https://pubs.acs.org/doi/pdf/10.1021/acs.est.3c00199">Paper</a>	
+              <p></p>
+              <p>
+                Medical image data are often limited due to the expensive acquisition and annotation process. Hence, training a deep-learning model with only raw data can easily lead to overfitting.
+                To this end, we present a novel method, called Dynamic Data Augmentation (DDAug), which is efficient and has negligible computation cost. 
+                Our DDAug develops a hierarchical tree structure to represent various augmentations and utilizes an efficient Monte-Carlo tree searching algorithm to update, prune, and sample the tree. 
+                Experiments on multiple Prostate MRI datasets show that our method outperforms the current state-of-the-art data augmentation strategies.
+              </p>
+            </td>
+          </tr>
+          
           <tr onmouseout="est_stop()" onmouseover="est_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -148,7 +189,7 @@
               <br>
               <em>Honours Thesis</em>, 2022
               <br>
-              ANU Database, may be released later.
+              ANU Database.
               <p></p>
               <p>
                 This thesis develops an enhanced version based on the original Iterative Label
@@ -288,6 +329,7 @@
             <li>IEEE Member</li>
             <li>Australian Computer Society Member</li>
             <li>Asia Pacific Neural Network Society Member</li>
+            <li>ICONIP 2023 PC Member</li>
           </ul> 
         </td>
       </tr>
