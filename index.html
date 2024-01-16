@@ -23,7 +23,7 @@
               <p style="text-align:center">
                 <name>Xinyue XU</name>
               </p>
-              <p>I am currently a PhD student advised by <a href="https://xmengli.github.io/"> Prof. Xiaomeng Li</a> at The Hong Kong University of Science and Technology. 
+              <p>I am currently a PhD candidate advised by <a href="https://xmengli.github.io/"> Prof. Xiaomeng Li</a> at The Hong Kong University of Science and Technology. 
                 Prior of this, I completed my Bachelor degree (with Honours) at The Australian National University, 
                 where I had the privilege of being advised by <a href="https://en.wikipedia.org/wiki/Amanda_Barnard"> Senior Prof. Amanda Barnard</a>
                 and supervised by <a href="https://scholar.google.com.au/citations?user=r2-lXicAAAAJ&hl=en"> Dr. Amanda Parker</a>.
@@ -53,7 +53,7 @@
           <td style="padding:20px;width:100%;vertical-align:middle">
             <heading>Research</heading>
             <p>
-              My research interest is to apply Machine Learning to interdisciplinary (medical image analysis, material science, environmental science etc.) In particluar,
+              My research interest is to apply Machine Learning to interdisciplinary (medical image analysis, environmental science, material science etc.) In particluar,
               I am interested in Interpretable ML, AutoML and Clustering Analysis.
             </p>
           </td>
@@ -74,10 +74,50 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="ecbm_stop()" onmouseover="ecbm_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='ecbm_image'>
+                  <img src='images/ecbm.png' width="160"></div>
+                <img src='images/ecbm.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function ecbm_start() {
+                  document.getElementById('ecbm_image').style.opacity = "1";
+                }
+
+                function aug_stop() {
+                  document.getElementById('ecbm_image').style.opacity = "0";
+                }
+                aug_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://openreview.net/forum?id=I1quoTXZzc">
+                <papertitle>Energy-Based Concept Bottleneck Models</papertitle>
+              </a>
+              <br>
+              <strong>Xinyue Xu</strong>,
+              Yi Qin,
+              Lu Mi,
+              Hao Wang, 
+              Xiaomeng Li
+              <br>
+              <em>ICLR</em>, 2024
+              <br>
+              <a href="https://openreview.net/forum?id=I1quoTXZzc">Paper</a>/<a href="">Code</a> (coming soon)	
+              <p></p>
+              <p>
+                We introduce Energy-Based Concept Bottleneck Models (ECBM) as a unified framework 
+                for concept-based prediction, concept correction, and fine-grained interpretations based on conditional probabilities.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="aug_stop()" onmouseover="aug_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='est_image'>
+                <div class="two" id='aug_image'>
                   <img src='images/aug.png' width="160"></div>
                 <img src='images/aug.png' width="160">
               </div>
