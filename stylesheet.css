@@ -129,3 +129,11 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.category {
+  font-weight: bold;
+  color: #007BFF;
+  background-color: #EFEFEF;
+  padding: 5px;
+  border-radius: 5px;
+}
