@@ -130,10 +130,29 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-.category {
+.category_1 {
   font-weight: bold;
-  color: #007BFF;
-  background-color: #EFEFEF;
-  padding: 5px;
-  border-radius: 5px;
+  color: #000000;
+  background-color: #007BFF;
+  padding: 4px;
+  border-radius: 4px;
 }
+
+.category_2 {
+  font-weight: bold;
+  color: #000000;
+  background-color: #fff700;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.category_3 {
+  font-weight: bold;
+  color: #000000;
+  background-color: #00ddff;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+
+
