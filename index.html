@@ -14,7 +14,7 @@
 
 <body>
 
-  <table style="width:120%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table style="width:100%;max-width:1200px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
         <table style="width:120%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
@@ -23,18 +23,22 @@
               <p style="text-align:center">
                 <name>Xinyue XU</name>
               </p>
-              <p>I am currently a PhD Candidate at The Hong Kong University of Science and Technology, 
-                advised by <a href="https://xmengli.github.io/"> Prof. Xiaomeng Li</a> and co-advised by <a href="http://www.wanghao.in/"> Prof. Hao Wang</a> at Rutgers University. 
-                Prior of this, I completed my Bachelor degree (with Honours) at The Australian National University, 
-                where I had the privilege of being advised by <a href="https://en.wikipedia.org/wiki/Amanda_Barnard"> Senior Prof. Amanda Barnard</a>
-                and supervised by <a href="https://scholar.google.com.au/citations?user=r2-lXicAAAAJ&hl=en"> Dr. Amanda Parker</a>.
-                My research journey includes experiences as a Research Assistant at MIT's Computational Connectomics Group lead by <a href="https://people.csail.mit.edu/shanir/"> Prof. Nir Shavit</a>,
-                where I had the opportunity to collaborate with <a href="http://www.wanghao.in/"> Prof. Hao Wang</a>  and <a href="https://lumimim.github.io/"> Prof. Lu Mi</a>.
-                Furthermore, I had served as a Research Assistant under the supervision of <a href="https://guo-gang.com/"> Dr. Gang Guo </a> at NUS.
-              </p>
+              <p>
+
+                I am currently a PhD candidate at The Hong Kong University of Science and Technology, working under the supervision of <a href="https://xmengli.github.io/">Prof. Xiaomeng Li</a> 
+                and co-supervised by <a href="http://www.wanghao.in/">Prof. Hao Wang</a> at Rutgers University. 
+                Prior to this, I earned my Bachelor degree (with Honours) from The Australian National University, 
+                where I was fortunate to be advised by <a href="https://en.wikipedia.org/wiki/Amanda_Barnard">Senior Prof. Amanda Barnard</a> and supervised by <a href="https://scholar.google.com.au/citations?user=r2-lXicAAAAJ&hl=en">Dr. Amanda Parker</a>.
+
+                My research journey has been enriched by valuable experiences, including serving as a Research assistant at MIT Computational Connectomics Group led by <a href="https://people.csail.mit.edu/shanir/">Prof. Nir Shavit</a>, 
+                where I had the privilege of collaborating with <a href="http://www.wanghao.in/">Prof. Hao Wang</a> and <a href="https://people.csail.mit.edu/lumi/">Prof. Lu Mi</a> (Georgia Institute of Technology). 
+                Additionally, I worked as a Research assistant at the National University of Singapore, supervised by <a href="https://guo-gang.com/">Dr. Gang Guo</a>.
+
+
+                </p>
               <p style="text-align:center">
                 <a href="mailto:xinyuexu1999@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="data/Resume.pdf">CV</a> &nbsp/&nbsp
+                <a href="data/Resume_XinyueXU.pdf">CV</a> &nbsp/&nbsp
                 <a href="https://scholar.google.com/citations?user=9AthkQ0AAAAJ&hl=zh-CN">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/xinyue-thea-xu-a15984179/">LinkedIn</a> 
                 <!-- &nbsp/&nbsp -->
@@ -54,13 +58,13 @@
           <td style="padding:20px;width:100%;vertical-align:middle">
             <heading>Research</heading>
             <p>
-              My research interest is to apply Machine Learning to interdisciplinary fields. 
+              My research interest is to apply Interpretable Machine Learning to interdisciplinary fields. 
               <br>
               In particluar, I am interested in:
               <ul>
               <li>Interpretable ML (Concept-Based Explanations, Rule-Based Models, etc.)</li>
-              <li>AI4Science (medical image analysis, environmental science, material science etc.)</li>
-              <li>Multimodal LLM</li>
+              <li>AI4Science (Healthcare, Environmental Science, Material Science etc.)</li>
+              <li>Large Language Models (Mechanistic Interpretability, Multimodal LLM)</li>
               </ul>
             </p>
           </td>
@@ -85,8 +89,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='ecbm_image'>
-                  <img src='images/ecbm.png' width="160"></div>
-                <img src='images/ecbm.png' width="160">
+                  <img src='images/ecbm.png' style="width: 100%; height: auto;"></div>
+                <img src='images/ecbm.png' style="width: 100%; height: auto;">
               </div>
               <script type="text/javascript">
                 function ecbm_start() {
@@ -118,8 +122,50 @@
               <span class="category_3">Interpretability</span>
               <p></p>
               <p>
-                We introduce Energy-Based Concept Bottleneck Models (ECBM) as a unified framework 
+                We introduce Energy-Based Concept Bottleneck Models (ECBMs) as a unified framework 
                 for concept-based prediction, concept correction, and fine-grained interpretations based on conditional probabilities.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="ecdm_stop()" onmouseover="ecdm_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='ecdm_image'>
+                  <img src='images/ecdm.png' style="width: 100%; height: auto;"></div>
+                <img src='images/ecdm.png' style="width: 100%; height: auto;">
+              </div>
+              <script type="text/javascript">
+                function ecdm_start() {
+                  document.getElementById('ecbm_image').style.opacity = "1";
+                }
+
+                function ecdm_stop() {
+                  document.getElementById('ecbm_image').style.opacity = "0";
+                }
+                ecdm_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://openreview.net/forum?id=UKCPaTcJAo">
+                <papertitle>Energy-Based Conceptual Diffusion Model</papertitle>
+              </a>
+              <br>
+              Yi Qin,
+              <strong>Xinyue Xu</strong>,
+              <u>Hao Wang</u>, 
+              <u>Xiaomeng Li</u>
+              <br>
+              <em>NeurIPS Safe Generative AI Workshop</em>, 2024
+              <br>
+              <a href=https://openreview.net/forum?id=UKCPaTcJAo">Paper</a>
+              <br>
+              <br>
+              <span class="category_3">Interpretability</span>
+              <p></p>
+              <p>
+                We propose Energy-Based Conceptual Diffusion Models (ECDMs), 
+                a framework that unifies the concept-based generation, conditional interpretation, concept debugging, intervention, and imputation under the joint energy-based formulation.
               </p>
             </td>
           </tr>
@@ -128,8 +174,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='est_image'>
-                  <img src='images/grl.png' width="160"></div>
-                <img src='images/grl.png' width="160">
+                  <img src='images/grl.png' style="width: 100%; height: auto;"></div>
+                <img src='images/grl.png' style="width: 100%; height: auto;">
               </div>
               <script type="text/javascript">
                 function grl_start() {
@@ -176,8 +222,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='aug_image'>
-                  <img src='images/aug.png' width="160"></div>
-                <img src='images/aug.png' width="160">
+                  <img src='images/aug.png' style="width: 100%; height: auto;"></div>
+                <img src='images/aug.png' style="width: 100%; height: auto;">
               </div>
               <script type="text/javascript">
                 function aug_start() {
@@ -218,8 +264,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='est_image'>
-                  <img src='images/est.png' width="160"></div>
-                <img src='images/est.png' width="160">
+                  <img src='images/est.png' style="width: 100%; height: auto;"></div>
+                <img src='images/est.png' style="width: 100%; height: auto;">
               </div>
               <script type="text/javascript">
                 function est_start() {
@@ -271,8 +317,8 @@
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='gnns_image'>
-                  <img src='images/GNNS.png' width="160"></div>
-                <img src='images/GNNS.png' width="160">
+                  <img src='images/GNNS.png' style="width: 100%; height: auto;"></div>
+                <img src='images/GNNS.png' style="width: 100%; height: auto;">
               </div>
               <script type="text/javascript">
                 function gnns_start() {
@@ -311,13 +357,93 @@
             </td>
           </tr>
 
+          <tr onmouseout="ils_stop()" onmouseover="ils_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='ils_image'>
+                  <img src='images/shape.png' style="width: 100%; height: auto;"></div>
+                <img src='images/shape.png' style="width: 100%; height: auto;">
+              </div>
+              <script type="text/javascript">
+                function ils_start() {
+                  document.getElementById('ils_image').style.opacity = "1";
+                }
+
+                function ils_stop() {
+                  document.getElementById('ils_image').style.opacity = "0";
+                }
+                ils_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="">
+                <papertitle>Towards Faster Hyperparameter-free Clustering using Enhanced Iterative Label Spreading</papertitle>
+              </a>
+              <br>
+              <strong>Xinyue Xu</strong>
+              <br>
+              <em>Honours Thesis</em>, 2022
+              <br>
+              ANU Database.
+              <br>
+              <a href="https://github.com/Thea-Hsu/EILS">Code</a>	
+              <br>
+              <br>
+              <span class="category_2">AI4Science</span>
+              <p></p>
+              <p>
+                This thesis develops an enhanced version based on the original Iterative Label
+                Spreading Clustering which is specially designed for materials science, and aim to
+                become faster and have fewer hyperparameters.
+              </p>
+            </td>
+          </tr>
+
+        
+          <tr onmouseout="nad_stop()" onmouseover="nad_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='nad_image'>
+                  <img src='images/nad.png' style="width: 100%; height: auto;"></div>
+                <img src='images/nad.png' style="width: 100%; height: auto;">
+              </div>
+              <script type="text/javascript">
+                function nad_start() {
+                  document.getElementById('nad_image').style.opacity = "1";
+                }
+
+                function nad_stop() {
+                  document.getElementById('nad_image').style.opacity = "0";
+                }
+                nad_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://ieeexplore.ieee.org/abstract/document/9414766">
+                <papertitle>Hybrid model for network anomaly detection with gradient boosting decision trees
+                  and tabtransformer</papertitle>
+              </a>
+              <br>
+              <strong>Xinyue Xu</strong>,  
+              Xiaolu Zheng
+              <br>
+              <em>ICASSP</em>, 2021  
+              <br>
+              <a href="https://ieeexplore.ieee.org/abstract/document/9414766">Paper</a>		
+              <p></p>
+              <p>In this paper, we present our solution for the ICASSP 2021 Network Anomaly Detection Challenge (NAD) challenge.  
+                Our approach ranked as 2nd place in the final leaderboard.
+              </p>
+            </td>
+          </tr>
+
 
           <tr onmouseout="fuzzy_stop()" onmouseover="fuzzy_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='fuzzy_image'>
-                  <img src='images/fuzzy.webp' width="160"></div>
-                <img src='images/fuzzy.webp' width="160">
+                  <img src='images/fuzzy.webp' style="width: 100%; height: auto;"></div>
+                <img src='images/fuzzy.webp' style="width: 100%; height: auto;">
               </div>
               <script type="text/javascript">
                 function fuzzy_start() {
@@ -361,17 +487,29 @@
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
         <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Honours, Membership and Sevices</heading>
+          <heading>Honors and Awards</heading>
           <ul>
             <li>Hong Kong PhD Fellowship, 2022 - 2026</li>
             <li>Conference Travel Allowance of HKPFS, 2023 - 2024</li>
-            <li>HKUST RedBird PhD Award, 2022 - 2024</li>
-            <li>IEEE Member, since 2021</li>
+            <li>HKUST RedBird PhD Award, 2022 - 2023</li>
+            <li>HKUST Academic Excellence Awards (Continuing Students), 2023 - 2024</li>
+          </ul> 
+        </td>
+      </tr>
+    </tbody></table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+        <td style="padding:20px;width:100%;vertical-align:middle">
+          <heading>Memberships and Services</heading>
+          <ul>
+            <li>IEEE Graduate Student Member, since 2021</li>
             <li>Australian Computer Society Member, since 2021</li>
             <li>Asia Pacific Neural Network Society Member, since 2021</li>
             <li>ICLR Reviewer, 2025</li>
-            <li>ICONIP PC Member, 2023 - 2024</li>
-            <li>Teaching Assistant for ELEC 1200 A System View of Communications: from Signals to Packets, 2023</li>
+            <li>ICONIP Program Committee Member, 2023 - 2024</li>
+            <li>Teaching Assistant of Statistics of Stochastic Process & Algorithms and Analysis, 2021 (SJTU Summer School)</li>
+            <li>Teaching Assistant of ELEC 1200 A System View of Communications: from Signals to Packets, Spring & Fall 2023 (HKUST)</li>
           </ul> 
         </td>
       </tr>

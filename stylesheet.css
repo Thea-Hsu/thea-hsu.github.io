@@ -63,6 +63,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+
 a {
   color: #1772d0;
   text-decoration: none;
@@ -81,43 +82,45 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px
+  font-size: 18px
 }
+
+
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 26px;
 }
 
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700
 }
 
 name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 36px;
 }
 
 .one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+  width: 260px; /* 增加宽度 */
+  height: 220px; /* 增加高度 */
+  position: relative; /* 保持相对定位，用于内部绝对定位的子元素 */
 }
 
 .two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+  width: 260px; /* 宽度与父容器一致 */
+  height: 220px; /* 高度与父容器一致 */
+  position: absolute; /* 绝对定位，用于叠加效果 */
+  transition: opacity 0.2s ease-in-out; /* 平滑过渡效果 */
+  -moz-transition: opacity 0.2s ease-in-out; /* Firefox 支持 */
+  -webkit-transition: opacity 0.2s ease-in-out; /* Safari 支持 */
 }
 
 .fade {
@@ -132,26 +135,29 @@ span.highlight {
 
 .category_1 {
   font-weight: bold;
-  color: #000000;
-  background-color: #007BFF;
-  padding: 4px;
-  border-radius: 4px;
+  color: #FFFFFF; /* 白色文字 */
+  background-color: #8E44AD; /* 柔和紫色 */
+  padding: 6px 12px; /* 内边距 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
 
 .category_2 {
   font-weight: bold;
-  color: #000000;
-  background-color: #fff700;
-  padding: 4px;
-  border-radius: 4px;
+  color: #FFFFFF; /* 白色文字 */
+  background-color: #50C878; /* 柔和绿色 */
+  padding: 6px 12px; /* 内边距 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
 
 .category_3 {
   font-weight: bold;
-  color: #000000;
-  background-color: #00ddff;
-  padding: 4px;
-  border-radius: 4px;
+  color: #FFFFFF; /* 白色文字 */
+  background-color: #4A90E2; /* 柔和的蓝色 */
+  padding: 6px 12px; /* 调整内边距，增加视觉舒适感 */
+  border-radius: 8px; /* 更大的圆角，现代风格 */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2); /* 添加柔和阴影，增加立体感 */
 }
 
 
