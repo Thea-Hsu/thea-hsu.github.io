@@ -84,6 +84,51 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="cuda_stop()" onmouseover="cuda_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='cuda_image'>
+                  <img src='images/cuda.png' style="width: 100%; height: auto;"></div>
+                <img src='images/cuda.png' style="width: 100%; height: auto;">
+              </div>
+              <script type="text/javascript">
+                function cuda_start() {
+                  document.getElementById('cuda_image').style.opacity = "1";
+                }
+
+                function cuda_stop() {
+                  document.getElementById('cuda_image').style.opacity = "0";
+                }
+                cuda_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://openreview.net/forum?id=ZWsjNcUDIs&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DICML.cc%2F2025%2FConference%2FAuthors%23your-submissions)">
+                <papertitle>Concept-Based Unsupervised Domain Adaptation</papertitle>
+              </a>
+              <br>
+              <strong>Xinyue Xu&#42</strong>,
+              Yueying Hu&#42,
+              Hui Tang,
+              Yi Qin,
+              Lu Mi,
+              Hao Wang, 
+              Xiaomeng Li
+              <br>
+              <em>ICML</em>, 2025
+              <br>
+              <a href="">Paper</a>
+              <br>
+              <br>
+              <span class="category_3">Interpretability</span>
+              <p></p>
+              <p>
+                We propose Concept-based Unsupervised Domain Adaptation, 
+                a framework that improves interpretability and robustness of Concept Bottleneck Models under domain shifts through adversarial training.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="ecbm_stop()" onmouseover="ecbm_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
