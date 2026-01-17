@@ -1,0 +1,413 @@
+/* =========================================
+   1. Variables & Global Settings
+   ========================================= */
+:root {
+  --primary: #1772d0;
+  --accent: #50C878;
+  --bg-color: #ffffff;
+  --bg-alt: #fcfcfc;
+  --text-main: #2c3e50;
+  --text-muted: #555555;
+  --border-color: #f0f0f0;
+  --shadow: 0 4px 15px rgba(0,0,0,0.03);
+  --nav-height: 60px;
+}
+
+/* =========================================
+   2. Reset & Typography
+   ========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6; 
+  color: var(--text-main); 
+  background: var(--bg-color);
+  padding-top: var(--nav-height); 
+}
+
+a { color: var(--primary); text-decoration: none; transition: 0.2s; }
+a:hover { color: var(--accent); }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* =========================================
+   3. Layout Utilities
+   ========================================= */
+.container { 
+  width: 90%; 
+  max-width: 960px; 
+  margin: auto; 
+}
+
+.section { padding: 60px 0; }
+
+.alt-bg { 
+  background: var(--bg-alt); 
+  border-top: 1px solid var(--border-color); 
+  border-bottom: 1px solid var(--border-color); 
+}
+
+.center-text { text-align: center; }
+
+/* =========================================
+   4. Navbar (Glassmorphism Effect)
+   ========================================= */
+.navbar { 
+  background: rgba(255, 255, 255, 0.95); 
+  backdrop-filter: blur(10px); 
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  border-bottom: 1px solid var(--border-color);
+  height: var(--nav-height);
+}
+
+.navbar .container { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 100%; 
+}
+
+.nav-left a { 
+  font-weight: 700; 
+  font-size: 20px; 
+  color: var(--text-main); 
+}
+
+.nav-links a { 
+  margin-left: 20px; 
+  font-size: 15px; 
+  font-weight: 500; 
+  color: var(--text-muted); 
+}
+.nav-links a:hover { color: var(--primary); }
+
+#darkToggle { 
+  margin-left: 20px; 
+  border: none; 
+  background: none; 
+  font-size: 20px; 
+  cursor: pointer; 
+}
+
+/* =========================================
+   5. Hero Section (Personal Info)
+   ========================================= */
+.hero { padding: 80px 0; }
+
+.hero-grid { 
+  display: grid; 
+  grid-template-columns: 3fr 2fr; 
+  gap: 40px; 
+  align-items: center; 
+}
+
+.hero h1 { 
+  font-size: 40px; 
+  font-weight: 700; 
+  margin-bottom: 5px; 
+  letter-spacing: -0.5px;
+}
+
+.subtitle { 
+  font-size: 18px; 
+  color: var(--text-muted); 
+  margin-bottom: 20px; 
+}
+
+.intro p { 
+  margin-bottom: 15px; 
+  text-align: justify; 
+  font-size: 16px;
+}
+
+/* Collab Note */
+.collab-note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 15px;
+  font-style: italic;
+  border-left: 3px solid var(--accent); 
+  padding-left: 10px;
+}
+
+/* Buttons */
+.hero-buttons { 
+  margin-top: 25px; 
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+/* Updated Button Styles for Icons */
+.btn { 
+  background: var(--bg-alt); 
+  border: 1px solid var(--primary); 
+  color: var(--primary);
+  padding: 6px 16px; 
+  border-radius: 20px; 
+  font-size: 14px; 
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover { 
+  background: var(--primary); 
+  color: white; 
+  box-shadow: 0 4px 10px rgba(23, 114, 208, 0.2);
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: currentColor;
+  transition: fill 0.2s ease;
+}
+
+/* Square Photo */
+.hero-img img { 
+  width: 240px; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 12px; /* 方形带圆角 */
+  border: 4px solid #fff; 
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+  display: block; 
+  margin: auto;
+}
+
+/* =========================================
+   6. Headings
+   ========================================= */
+h2 { 
+  font-size: 24px; 
+  margin-bottom: 30px; 
+  border-bottom: 2px solid var(--border-color); 
+  padding-bottom: 10px; 
+  display: inline-block; 
+  color: var(--text-main);
+}
+
+/* =========================================
+   7. Research Interests (Cards/List)
+   ========================================= */
+.grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+  gap: 20px; 
+}
+
+.card { 
+  background: white; 
+  padding: 25px; 
+  border-radius: 12px; 
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow); 
+  transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-3px); }
+
+.card .icon { font-size: 28px; margin-bottom: 10px; }
+.card h3 { font-size: 18px; margin-bottom: 8px; color: var(--primary); }
+.card p { font-size: 14px; color: var(--text-muted); }
+
+/* Research Interests List Style */
+.interest-list {
+  margin-top: 20px;
+  padding-left: 20px; 
+  list-style-type: disc; 
+}
+
+.interest-list li {
+  margin-bottom: 15px; 
+  font-size: 16px;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.interest-list li strong {
+  color: var(--text-main);
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* =========================================
+   8. Publications (Filters & List)
+   ========================================= */
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--bg-alt);
+  border: 1px solid #ddd;
+  color: var(--text-muted);
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #eee;
+  color: var(--text-main);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(23, 114, 208, 0.2);
+}
+
+.pub-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 30px; 
+}
+
+.pub-card { 
+  display: flex; 
+  gap: 25px; 
+  align-items: flex-start; 
+}
+
+.pub-img img { 
+  width: 160px; 
+  height: auto; 
+  border-radius: 6px; 
+  border: 1px solid #eee;
+  transition: opacity 0.2s;
+}
+.pub-img img:hover { opacity: 0.8; }
+
+.pub-content { flex: 1; }
+
+.pub-title { 
+  font-size: 17px; 
+  font-weight: 600; 
+  color: var(--text-main); 
+  margin-bottom: 5px; 
+}
+
+.pub-authors { font-size: 14px; color: #444; margin-bottom: 5px; }
+.pub-venue { font-style: italic; color: #777; font-size: 14px; margin-bottom: 10px; }
+.pub-desc { font-size: 14px; color: #666; margin-bottom: 12px; }
+
+.tag-btn { 
+  display: inline-block; 
+  font-size: 12px; 
+  padding: 2px 8px; 
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+  color: #666; 
+  margin-right: 5px; 
+}
+.tag-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.tag-category {
+  font-size: 11px; 
+  background: #f0f0f0; 
+  color: #888; 
+  padding: 2px 6px; 
+  border-radius: 4px;
+}
+
+.pub-card.fade-in { animation: fadeIn 0.4s ease-in-out; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   9. Awards & Service
+   ========================================= */
+.two-col-layout { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 40px; 
+}
+
+.dense-list li { 
+  margin-bottom: 10px; 
+  padding-left: 15px; 
+  position: relative; 
+  font-size: 15px; 
+}
+
+.dense-list li::before { 
+  content: '•'; 
+  color: var(--accent); 
+  position: absolute; 
+  left: 0; 
+  font-weight: bold;
+}
+
+/* =========================================
+   10. Map & Footer
+   ========================================= */
+.map-section { 
+  padding-top: 20px; 
+  padding-bottom: 40px; 
+  border-top: 1px solid var(--border-color); 
+}
+
+footer { 
+  text-align: center; 
+  padding: 30px; 
+  color: #999; 
+  font-size: 13px; 
+  border-top: 1px solid var(--border-color); 
+  background: #fafafa; 
+}
+
+/* =========================================
+   11. Responsive
+   ========================================= */
+@media(max-width: 768px) {
+  .hero-grid, .two-col-layout, .pub-card { 
+    grid-template-columns: 1fr; 
+    display: flex; 
+    flex-direction: column; 
+  }
+  .nav-links { display: none; }
+  .hero-img { order: -1; margin-bottom: 20px; }
+}
+
+/* =========================================
+   12. Dark Mode
+   ========================================= */
+body.dark {
+  --bg-color: #121212; 
+  --bg-alt: #1a1a1a; 
+  --text-main: #e0e0e0; 
+  --text-muted: #a0a0a0; 
+  --border-color: #333; 
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+body.dark .navbar { background: rgba(18,18,18,0.9); border-bottom: 1px solid #333; }
+body.dark .nav-left a, body.dark .nav-links a { color: #ccc; }
+body.dark .hero-img img, body.dark .pub-img img { border-color: #333; opacity: 0.9; }
+body.dark .card, body.dark .btn, body.dark .tag-btn { background: #1e1e1e; border-color: #333; color: #ccc; }
+body.dark .tag-btn:hover { border-color: var(--primary); color: var(--primary); }
+body.dark .tag-category { background: #333; color: #aaa; }
+body.dark .filter-btn { background: #1e1e1e; border-color: #333; color: #aaa; }
+body.dark .filter-btn:hover { color: white; background: #333; }
+body.dark .filter-btn.active { background: var(--primary); color: white; }
+body.dark footer { background: #111; }
