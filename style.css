@@ -8,9 +8,13 @@
   --bg-alt: #fcfcfc;
   --text-main: #2c3e50;
   --text-muted: #555555;
-  --border-color: #f0f0f0;
-  --shadow: 0 4px 15px rgba(0,0,0,0.03);
-  --nav-height: 60px;
+  --border-color: #e5e7eb;
+  --shadow: 0 4px 20px rgba(0,0,0,0.04);
+  --nav-height: 64px;
+  
+  /* [修改点]：把标题字体改回简洁的 Inter/系统字体，不再使用 Playfair Display */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* =========================================
@@ -19,11 +23,13 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6; 
+  font-family: var(--font-body);
+  font-size: 16px; /* 统一基准字号 */
+  line-height: 1.7; /* 增加行间距，提升可读性 */
   color: var(--text-main); 
   background: var(--bg-color);
   padding-top: var(--nav-height); 
+  -webkit-font-smoothing: antialiased; /* 让字体在 Mac 上更清晰 */
 }
 
 a { color: var(--primary); text-decoration: none; transition: 0.2s; }
@@ -40,7 +46,7 @@ img { max-width: 100%; display: block; }
   margin: auto; 
 }
 
-.section { padding: 60px 0; }
+.section { padding: 70px 0; } /* 增加板块间距 */
 
 .alt-bg { 
   background: var(--bg-alt); 
@@ -51,15 +57,13 @@ img { max-width: 100%; display: block; }
 .center-text { text-align: center; }
 
 /* =========================================
-   4. Navbar (Glassmorphism Effect)
+   4. Navbar
    ========================================= */
 .navbar { 
   background: rgba(255, 255, 255, 0.95); 
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(12px); 
   position: fixed; 
-  top: 0; 
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 1000; 
   border-bottom: 1px solid var(--border-color);
   height: var(--nav-height);
@@ -73,13 +77,14 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-left a { 
+  font-family: var(--font-heading); /* 名字用衬线体 */
   font-weight: 700; 
-  font-size: 20px; 
+  font-size: 22px; 
   color: var(--text-main); 
 }
 
 .nav-links a { 
-  margin-left: 20px; 
+  margin-left: 24px; 
   font-size: 15px; 
   font-weight: 500; 
   color: var(--text-muted); 
@@ -87,250 +92,250 @@ img { max-width: 100%; display: block; }
 .nav-links a:hover { color: var(--primary); }
 
 #darkToggle { 
-  margin-left: 20px; 
-  border: none; 
-  background: none; 
-  font-size: 20px; 
-  cursor: pointer; 
+  margin-left: 24px; 
+  border: none; background: none; 
+  font-size: 20px; cursor: pointer; 
 }
 
 /* =========================================
-   5. Hero Section (Personal Info)
+   5. Hero Section
    ========================================= */
 .hero { padding: 80px 0; }
 
 .hero-grid { 
   display: grid; 
   grid-template-columns: 3fr 2fr; 
-  gap: 40px; 
+  gap: 50px; 
   align-items: center; 
 }
 
 .hero h1 { 
-  font-size: 40px; 
+  font-family: var(--font-heading);
+  font-size: 34px; /* 原来是 48px，现在改小 */
   font-weight: 700; 
-  margin-bottom: 5px; 
-  letter-spacing: -0.5px;
-}
-
-.subtitle { 
-  font-size: 18px; 
-  color: var(--text-muted); 
-  margin-bottom: 20px; 
+  margin-bottom: 15px; 
+  line-height: 1.2;
+  color: #111;
+  letter-spacing: -0.5px; /*稍微收紧一点间距，显得精致*/
 }
 
 .intro p { 
-  margin-bottom: 15px; 
+  margin-bottom: 18px; 
   text-align: justify; 
   font-size: 16px;
+  color: #444;
 }
 
-/* Collab Note */
 .collab-note {
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
-  margin-top: 15px;
+  margin-top: 20px;
   font-style: italic;
   border-left: 3px solid var(--accent); 
-  padding-left: 10px;
+  padding-left: 12px;
+  background: rgba(80, 200, 120, 0.05); /* 淡淡的背景色 */
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
 }
+
+.note {
+  display: block;        /* 确保它是块级元素 */
+  margin-top: -15px;     /* 让它稍微往上提，靠近 "Publications" 标题，表明从属关系 */
+  margin-bottom: 40px;   /* 【关键】大幅增加底部间距，把下方的按钮推远 */
+  
+  font-size: 14px;       /* 字号稍微改小，突出精致感 */
+  color: #777;           /* 颜色改淡，不要和标题抢戏 */
+  font-style: italic;    /* 斜体，增加学术感 */
+}
+
 
 /* Buttons */
 .hero-buttons { 
   margin-top: 25px; 
-  display: flex; 
-  gap: 10px; 
-  flex-wrap: wrap; 
+  display: flex; gap: 12px; flex-wrap: wrap; 
 }
 
-/* Updated Button Styles for Icons */
 .btn { 
   background: var(--bg-alt); 
-  border: 1px solid var(--primary); 
-  color: var(--primary);
-  padding: 6px 16px; 
-  border-radius: 20px; 
+  border: 1px solid var(--border-color); 
+  color: var(--text-main);
+  padding: 8px 18px; 
+  border-radius: 30px; 
   font-size: 14px; 
   font-weight: 500;
   transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-flex; align-items: center;
 }
 
 .btn:hover { 
-  background: var(--primary); 
-  color: white; 
-  box-shadow: 0 4px 10px rgba(23, 114, 208, 0.2);
+  border-color: var(--primary);
+  color: var(--primary);
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .btn svg {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
+  width: 16px; height: 16px; margin-right: 8px;
   fill: currentColor;
-  transition: fill 0.2s ease;
 }
 
-/* Square Photo */
 .hero-img img { 
-  width: 240px; 
-  height: auto; 
+  width: 260px; height: auto; 
   object-fit: cover; 
-  border-radius: 12px; /* 方形带圆角 */
-  border: 4px solid #fff; 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
-  display: block; 
-  margin: auto;
+  border-radius: 16px; 
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08); 
+  display: block; margin: auto;
 }
 
 /* =========================================
-   6. Headings
+   6. Global Headings (H2)
    ========================================= */
 h2 { 
-  font-size: 24px; 
-  margin-bottom: 30px; 
-  border-bottom: 2px solid var(--border-color); 
+  font-family: var(--font-heading);
+  font-size: 22px; /* 原来是 30px，现在改小，更显秀气 */
+  font-weight: 700;
+  margin-bottom: 25px; 
   padding-bottom: 10px; 
+  border-bottom: 1px solid var(--border-color); /* 边框也改细一点 */
   display: inline-block; 
-  color: var(--text-main);
+  color: #111;
+  letter-spacing: -0.2px;
 }
 
 /* =========================================
-   7. Research Interests (Cards/List)
+   7. Research Interests
    ========================================= */
-.grid-3 { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-  gap: 20px; 
+.section-intro {
+  margin-bottom: 25px;
+  font-size: 17px;
+  color: #333;
 }
 
-.card { 
-  background: white; 
-  padding: 25px; 
-  border-radius: 12px; 
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow); 
-  transition: transform 0.2s;
-}
-
-.card:hover { transform: translateY(-3px); }
-
-.card .icon { font-size: 28px; margin-bottom: 10px; }
-.card h3 { font-size: 18px; margin-bottom: 8px; color: var(--primary); }
-.card p { font-size: 14px; color: var(--text-muted); }
-
-/* Research Interests List Style */
-.interest-list {
-  margin-top: 20px;
-  padding-left: 20px; 
-  list-style-type: disc; 
-}
-
+.interest-list { margin-top: 20px; }
 .interest-list li {
-  margin-bottom: 15px; 
+  margin-bottom: 14px; 
   font-size: 16px;
-  color: var(--text-main);
-  line-height: 1.7;
+  color: #444;
+  position: relative;
+  padding-left: 20px;
 }
-
+.interest-list li::before {
+  content: "•"; color: var(--accent);
+  position: absolute; left: 0; top: 0;
+  font-weight: bold; font-size: 1.2em;
+}
 .interest-list li strong {
-  color: var(--text-main);
+  color: #111;
   font-weight: 600;
-  margin-right: 5px;
+  margin-right: 6px;
 }
 
 /* =========================================
-   8. Publications (Filters & List)
+   8. Publications
    ========================================= */
 .filter-container {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
-  flex-wrap: wrap;
+  display: flex; gap: 8px; margin-bottom: 35px; flex-wrap: wrap;
 }
 
 .filter-btn {
-  background: var(--bg-alt);
-  border: 1px solid #ddd;
-  color: var(--text-muted);
-  padding: 6px 16px;
-  border-radius: 20px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #666;
+  padding: 6px 14px;
+  border-radius: 6px; /* 方一点更现代 */
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body);
   transition: all 0.2s ease;
 }
 
-.filter-btn:hover {
-  background: #eee;
-  color: var(--text-main);
-}
+.filter-btn:hover { background: #f5f5f5; color: #111; }
 
 .filter-btn.active {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-  box-shadow: 0 4px 10px rgba(23, 114, 208, 0.2);
+  background: #f0f7ff;
+  color: var(--primary);
+  border-color: rgba(23, 114, 208, 0.2);
+  font-weight: 600;
 }
 
-.pub-list { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 30px; 
-}
+.pub-list { display: flex; flex-direction: column; gap: 40px; } /* 增加论文间距 */
 
-.pub-card { 
-  display: flex; 
-  gap: 25px; 
-  align-items: flex-start; 
-}
+.pub-card { display: flex; gap: 30px; align-items: flex-start; }
 
 .pub-img img { 
-  width: 160px; 
-  height: auto; 
-  border-radius: 6px; 
-  border: 1px solid #eee;
+  width: 180px; /* 稍微加大图片 */
+  border-radius: 8px; 
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   transition: opacity 0.2s;
 }
-.pub-img img:hover { opacity: 0.8; }
+.pub-img img:hover { opacity: 0.9; }
 
 .pub-content { flex: 1; }
 
 .pub-title { 
-  font-size: 17px; 
+  font-family: var(--font-body); /* 标题保持清晰 */
+  font-size: 19px; 
   font-weight: 600; 
-  color: var(--text-main); 
-  margin-bottom: 5px; 
+  color: #111; 
+  margin-bottom: 8px; 
+  line-height: 1.4;
 }
 
-.pub-authors { font-size: 14px; color: #444; margin-bottom: 5px; }
-.pub-venue { font-style: italic; color: #777; font-size: 14px; margin-bottom: 10px; }
-.pub-desc { font-size: 14px; color: #666; margin-bottom: 12px; }
+.pub-authors { 
+  font-size: 15px; 
+  color: #444; 
+  margin-bottom: 6px; 
+}
+.pub-authors strong { color: #111; font-weight: 600; }
 
+.pub-venue { 
+  font-size: 15px; 
+  color: #666; 
+  margin-bottom: 12px; 
+}
+.pub-venue em { font-style: italic; color: var(--text-main); font-weight: 500;}
+
+.pub-desc { 
+  font-size: 15px; 
+  color: #555; 
+  margin-bottom: 14px; 
+  line-height: 1.6;
+}
+
+/* 标签样式优化 */
 .tag-btn { 
   display: inline-block; 
   font-size: 12px; 
-  padding: 2px 8px; 
-  border: 1px solid #ddd; 
-  border-radius: 4px; 
-  color: #666; 
-  margin-right: 5px; 
+  padding: 3px 10px; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 20px; 
+  color: #555; 
+  margin-right: 6px; 
+  background: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .tag-btn:hover { border-color: var(--primary); color: var(--primary); }
 
 .tag-category {
   font-size: 11px; 
-  background: #f0f0f0; 
-  color: #888; 
-  padding: 2px 6px; 
+  background: #f3f3f3; 
+  color: #777; 
+  padding: 4px 8px; 
   border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.pub-card.fade-in { animation: fadeIn 0.4s ease-in-out; }
+/* Animation */
+.pub-card.fade-in { animation: fadeIn 0.4s ease-out; }
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(5px); }
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -338,42 +343,36 @@ h2 {
    9. Awards & Service
    ========================================= */
 .two-col-layout { 
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  gap: 40px; 
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; 
 }
 
 .dense-list li { 
-  margin-bottom: 10px; 
-  padding-left: 15px; 
+  margin-bottom: 12px; 
+  padding-left: 18px; 
   position: relative; 
   font-size: 15px; 
+  color: #444;
 }
-
+.dense-list li strong { color: #222; }
 .dense-list li::before { 
-  content: '•'; 
+  content: '▹'; 
   color: var(--accent); 
-  position: absolute; 
-  left: 0; 
-  font-weight: bold;
+  position: absolute; left: 0; 
+  font-size: 14px;
 }
 
 /* =========================================
    10. Map & Footer
    ========================================= */
 .map-section { 
-  padding-top: 20px; 
-  padding-bottom: 40px; 
+  padding-top: 40px; padding-bottom: 60px; 
   border-top: 1px solid var(--border-color); 
 }
 
 footer { 
-  text-align: center; 
-  padding: 30px; 
-  color: #999; 
-  font-size: 13px; 
-  border-top: 1px solid var(--border-color); 
-  background: #fafafa; 
+  text-align: center; padding: 40px 0; 
+  color: #888; font-size: 14px; 
+  background: #fafafa; border-top: 1px solid var(--border-color); 
 }
 
 /* =========================================
@@ -382,32 +381,35 @@ footer {
 @media(max-width: 768px) {
   .hero-grid, .two-col-layout, .pub-card { 
     grid-template-columns: 1fr; 
-    display: flex; 
-    flex-direction: column; 
+    display: flex; flex-direction: column; 
   }
   .nav-links { display: none; }
-  .hero-img { order: -1; margin-bottom: 20px; }
+  .hero-img { order: -1; margin-bottom: 30px; }
+  .hero h1 { font-size: 36px; text-align: center; }
+  .intro p { text-align: left; }
+  .hero-buttons { justify-content: center; }
 }
 
 /* =========================================
-   12. Dark Mode
+   12. Dark Mode (Refined)
    ========================================= */
 body.dark {
   --bg-color: #121212; 
-  --bg-alt: #1a1a1a; 
-  --text-main: #e0e0e0; 
-  --text-muted: #a0a0a0; 
+  --bg-alt: #1c1c1c; 
+  --text-main: #e6e6e6; 
+  --text-muted: #b0b0b0; 
   --border-color: #333; 
-  --shadow: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 body.dark .navbar { background: rgba(18,18,18,0.9); border-bottom: 1px solid #333; }
-body.dark .nav-left a, body.dark .nav-links a { color: #ccc; }
-body.dark .hero-img img, body.dark .pub-img img { border-color: #333; opacity: 0.9; }
-body.dark .card, body.dark .btn, body.dark .tag-btn { background: #1e1e1e; border-color: #333; color: #ccc; }
-body.dark .tag-btn:hover { border-color: var(--primary); color: var(--primary); }
+body.dark .hero h1, body.dark h2, body.dark .pub-title, body.dark strong { color: #fff; }
+body.dark .collab-note { background: rgba(80, 200, 120, 0.1); color: #ccc; }
+body.dark .intro p, body.dark .pub-authors, body.dark .dense-list li { color: #ccc; }
+body.dark .btn { background: #222; border-color: #444; color: #ddd; }
+body.dark .btn:hover { border-color: var(--primary); color: var(--primary); }
+body.dark .pub-img img { opacity: 0.8; border-color: #333; }
+body.dark .tag-btn { background: #222; border-color: #444; color: #aaa; }
 body.dark .tag-category { background: #333; color: #aaa; }
-body.dark .filter-btn { background: #1e1e1e; border-color: #333; color: #aaa; }
-body.dark .filter-btn:hover { color: white; background: #333; }
-body.dark .filter-btn.active { background: var(--primary); color: white; }
-body.dark footer { background: #111; }
+body.dark .filter-btn:hover { background: #333; color: #fff; }
+body.dark .filter-btn.active { background: rgba(23, 114, 208, 0.2); color: #4da3ff; border-color: rgba(23, 114, 208, 0.4); }
