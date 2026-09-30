@@ -589,6 +589,7 @@ h1 {
 #map-container {
   width: 250px;
   max-width: 100%;
+  min-height: 271px;
   text-align: center;
 }
 
